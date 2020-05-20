@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="modulemain_AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/modulemain_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/modulemain_colorPrimaryDark</item>
+        <item name="colorAccent">@color/modulemain_colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+</resources>

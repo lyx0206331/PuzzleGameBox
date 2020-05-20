@@ -1,0 +1,50 @@
+<resources>
+    <string name="modulegomoku_app_name">休闲五子棋</string>
+
+    <string name="modulegomoku_backward">悔&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;棋</string>
+    <string name="modulegomoku_start_new">重新开局</string>
+    <string name="modulegomoku_quit">退出</string>
+    <string name="modulegomoku_start_again">再来一局</string>
+    <string name="modulegomoku_back_again_quit">再按一次返回退出</string>
+    <string name="modulegomoku_white_win">白棋胜，黑棋负</string>
+    <string name="modulegomoku_black_win">黑棋胜，白棋负</string>
+
+    <string name="modulegomoku_theme_settings">主题设置</string>
+    <string name="modulegomoku_mode_choose">模式选择</string>
+    <string name="modulegomoku_mode">模式</string>
+    <string name="modulegomoku_theme">主题</string>
+    <string name="modulegomoku_other">其它</string>
+    <string name="modulegomoku_other_settings">其它设置</string>
+    <string name="modulegomoku_about">关于</string>
+    <string name="modulegomoku_version">版本:</string>
+    <string name="modulegomoku_context_menu">Context menu</string>
+    <string name="modulegomoku_confirm">确定</string>
+    <string name="modulegomoku_junior">初级</string>
+    <string name="modulegomoku_middle_level">中级</string>
+    <string name="modulegomoku_high_level">高级</string>
+    <string name="modulegomoku_mail">邮箱:</string>
+    <string name="modulegomoku_mail_address">rq880113@163.com</string>
+
+    <string name="modulegomoku_bg_choose">背景选择</string>
+    <string name="modulegomoku_board_color">棋盘颜色</string>
+
+    <string name="modulegomoku_single_player">人机对战</string>
+    <string name="modulegomoku_double_player">双人对弈</string>
+    <string name="modulegomoku_mode_tips">模式切换将重新开始棋局，人机对战模式无悔棋功能！</string>
+
+    <string name="modulegomoku_bg_music">背景音乐</string>
+    <string name="modulegomoku_piece_sound">落子音效</string>
+    <string name="modulegomoku_rule">规则说明</string>
+    <string name="modulegomoku_check_update">检查更新</string>
+    <string name="modulegomoku_has_no_update">当前版本已是最新版本!</string>
+    <string name="modulegomoku_has_new_version">发现新版本</string>
+    <string name="modulegomoku_update_now">马上升级</string>
+    <string name="modulegomoku_update_next_time">下次再说</string>
+    <string name="modulegomoku_is_downloading">正在下载...</string>
+
+    <string name="modulegomoku_rule_desc">规则说明:\n\t\t\t\t\t&#160;本游戏只为休闲娱乐之用，无禁手等严格规则，玩家可随意落子，只要在横向、竖向、斜向或者反斜向先形成连珠五子即为获胜！</string>
+
+    <string name="modulegomoku_open_app">打开游戏%s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="modulegomoku_hello_blank_fragment">Hello blank fragment</string>
+</resources>

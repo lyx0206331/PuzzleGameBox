@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="modulegomoku_RippleButton">
+        <attr name="modulegomoku_rippleColor" format="color|reference" />
+        <attr name="modulegomoku_alphaFactor" format="float" />
+        <attr name="modulegomoku_hover" format="boolean" />
+    </declare-styleable>
+</resources>

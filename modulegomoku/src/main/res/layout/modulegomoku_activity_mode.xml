@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_mode"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/modulegomoku_base_bg"
+    tools:context="com.adrian.modulegomoku.activity.ModeActivity">
+
+    <include layout="@layout/modulegomoku_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/modulegomoku_activity_horizontal_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/modulegomoku_mode_tips"
+                android:textColor="@color/modulegomoku_font_gray" />
+
+            <RadioGroup
+                android:id="@+id/rg_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/modulegomoku_activity_horizontal_margin"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_single"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:text="@string/modulegomoku_single_player"
+                    android:textColor="@color/modulegomoku_font_gray" />
+
+                <RadioButton
+                    android:id="@+id/rb_double"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:text="@string/modulegomoku_double_player"
+                    android:textColor="@color/modulegomoku_font_gray" />
+            </RadioGroup>
+
+            <com.adrian.modulegomoku.views.RippleView
+                android:id="@+id/btn_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                ripple:modulegomoku_rv_rippleDuration="200"
+                ripple:modulegomoku_rv_centered="false"
+                ripple:modulegomoku_rv_type="rectangle">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/modulegomoku_confirm"
+                    android:textColor="@color/modulegomoku_white"
+                    android:background="@color/modulegomoku_base_blue"
+                    android:textSize="@dimen/modulegomoku_normal_font" />
+            </com.adrian.modulegomoku.views.RippleView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

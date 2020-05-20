@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="base_blue">#00c1e1</color>
+    <color name="ripple_float">#58FAAC</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="translucent">#88555555</color>
+    <color name="white">#ffffff</color>
+    <color name="font_gray">#555555</color>
+    <color name="base_bg">#eeeeee</color>
+</resources>

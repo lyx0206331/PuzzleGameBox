@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog>
+    <release
+        version="1.0.3"
+        versioncode="7">
+        <change>五子棋小游戏，黑白双方各执一子，轮流落子，横向竖向或者斜向先连成一线者胜！</change>
+    </release>
+</changelog>

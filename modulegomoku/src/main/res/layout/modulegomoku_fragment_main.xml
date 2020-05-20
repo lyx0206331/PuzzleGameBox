@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:background="@drawable/bg_4" />
+
+    <RadioGroup
+        android:id="@+id/rgLevel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/modulegomoku_translucent"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rbJuniorLevel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="@string/modulegomoku_junior"
+            android:textColor="@color/modulegomoku_white"
+            android:textSize="@dimen/modulegomoku_normal_font" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rbMiddleLevel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="@string/modulegomoku_middle_level"
+            android:textColor="@color/modulegomoku_white"
+            android:textSize="@dimen/modulegomoku_normal_font" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rbHighLevel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="@string/modulegomoku_high_level"
+            android:textColor="@color/modulegomoku_white"
+            android:textSize="@dimen/modulegomoku_normal_font" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/modulegomoku_activity_horizontal_margin"
+        android:layout_marginRight="@dimen/modulegomoku_activity_horizontal_margin"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <com.adrian.modulegomoku.views.GomokuView
+            android:id="@+id/gomoku_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gomoku_view"
+            android:layout_marginTop="@dimen/modulegomoku_activity_vertical_margin2"
+            android:layout_marginBottom="@dimen/modulegomoku_activity_vertical_margin"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <com.adrian.modulegomoku.views.RippleButton
+                android:id="@+id/btn_revoke"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/modulegomoku_base_blue"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1.0"
+                android:textColor="@color/modulegomoku_white"
+                android:textSize="@dimen/modulegomoku_normal_font"
+                android:text="@string/modulegomoku_backward"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:gravity="center"
+                android:padding="12dp"
+                ripple:modulegomoku_alphaFactor="0.7"
+                ripple:modulegomoku_rippleColor="@color/modulegomoku_white"
+                ripple:modulegomoku_hover="true" />
+
+            <com.adrian.modulegomoku.views.RippleButton
+                android:id="@+id/btn_restart"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:textColor="@color/modulegomoku_white"
+                android:background="@color/modulegomoku_base_blue"
+                android:textSize="@dimen/modulegomoku_normal_font"
+                android:text="@string/modulegomoku_start_new"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:gravity="center"
+                android:padding="12dp"
+                ripple:modulegomoku_alphaFactor="0.7"
+                ripple:modulegomoku_rippleColor="@color/modulegomoku_white"
+                ripple:modulegomoku_hover="true" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

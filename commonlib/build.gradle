@@ -1,0 +1,61 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVerion
+        targetSdkVersion rootProject.ext.android.targetSdkVerion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner rootProject.ext.android.testInstrumentationRunner
+        consumerProguardFiles 'consumer-rules.pro'
+
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+
+        kapt {
+            arguments {
+                arg("AROUTER_MODULE_NAME", project.getName())
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            //自定义boolean类型参数isModule为build.gradle中的isModule值，java或者kotlin代码中可通过BuildConfig.isModule调用，修改后需要Rebuild Project才生效
+            buildConfigField("boolean", "isModule", "${rootProject.ext.isModule}")
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            //自定义boolean类型参数isModule为build.gradle中的isModule值，java或者kotlin代码中可通过BuildConfig.isModule调用，修改后需要Rebuild Project才生效
+            buildConfigField("boolean", "isModule", "${rootProject.ext.isModule}")
+        }
+
+    }
+
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    api rootProject.ext.dependencies.androidXAppcompat
+    api rootProject.ext.dependencies.androidXConstraintLayout
+    api rootProject.ext.dependencies.androidXCore
+    testApi rootProject.ext.dependencies.androidXExtJUnit
+    androidTestApi rootProject.ext.dependencies.androidXTestRunner
+    androidTestApi rootProject.ext.dependencies.androidXTextEspressoCore
+
+    api rootProject.ext.dependencies.umsdkAnalytics
+    api rootProject.ext.dependencies.umsdkCommon
+    api rootProject.ext.dependencies.changelog
+
+    api rootProject.ext.dependencies.alibabaArouterApi
+    kapt rootProject.ext.dependencies.alibabaArouterCompiler
+}

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.adrian.modulegomoku">
+
+    <application
+        android:name=".application.GomokuApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_xiaomi"
+        android:label="@string/modulegomoku_app_name"
+        android:supportsRtl="true"
+        android:theme="@style/modulegomoku_AppTheme"
+        android:networkSecurityConfig="@xml/modulegomoku_network_security_config"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+        <!-- 友盟统计 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="585b533175ca3526b7001133" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
+
+        <!--android:theme="@style/Theme.AppStartLoad"-->
+        <activity
+            android:name=".activity.WelcomeActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/modulegomoku_Theme.AppStartLoad">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="unspecified">
+        </activity>
+        <activity
+            android:name=".activity.AboutActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.ThemeActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.ModeActivity"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name=".activity.OtherActivity"
+            android:screenOrientation="unspecified" />
+
+        <service
+            android:name=".service.BgMusicService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity android:name=".activity.RuleActivity" />
+
+        <service
+            android:name=".service.DownloadService"
+            android:enabled="true"
+            android:exported="false"></service>
+
+        <receiver android:name=".receiver.GomokuReceiver">
+            <intent-filter>
+                <action android:name="com.adrian.gomoku.start_update" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.miui.zeus.mimo.sdk.activityProxy.ProxyActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" /> <!--可以根据App设置不同的activity theme-->
+
+        <activity
+            android:name="com.miui.zeus.mimo.sdk.activityProxy.FullScreenProxyActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/modulegomoku_file_paths" />
+        </provider>
+    </application>
+
+</manifest>

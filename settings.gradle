@@ -1,0 +1,5 @@
+rootProject.name='PuzzleGameBox'
+include ':app'
+include ':modulemain'
+include ':modulegomoku'
+include ':commonlib'

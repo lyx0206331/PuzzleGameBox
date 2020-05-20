@@ -1,0 +1,15 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="modulegomoku_activity_horizontal_margin_s">10dp</dimen>
+    <dimen name="modulegomoku_activity_horizontal_margin">16dp</dimen>
+    <dimen name="modulegomoku_activity_vertical_margin">16dp</dimen>
+    <dimen name="modulegomoku_activity_vertical_margin2">32dp</dimen>
+
+    <dimen name="modulegomoku_tool_bar_text_size">22sp</dimen>
+    <dimen name="modulegomoku_main_screen_side_padding">10dp</dimen>
+    <dimen name="modulegomoku_text_top_padding">25dp</dimen>
+    <dimen name="modulegomoku_title_text_size">26sp</dimen>
+    <dimen name="modulegomoku_tool_bar_height">56dp</dimen>
+    <dimen name="modulegomoku_normal_font">18sp</dimen>
+    <dimen name="modulegomoku_about_icon_margin_top">100dp</dimen>
+</resources>

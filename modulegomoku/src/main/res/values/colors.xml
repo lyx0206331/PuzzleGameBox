@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="modulegomoku_colorPrimary">#008577</color>
+    <color name="modulegomoku_colorPrimaryDark">#00574B</color>
+    <color name="modulegomoku_colorAccent">#D81B60</color>
+    <color name="modulegomoku_base_blue">#00c1e1</color>
+    <color name="modulegomoku_ripple_float">#58FAAC</color>
+
+    <color name="modulegomoku_transparent">#00000000</color>
+    <color name="modulegomoku_translucent">#88555555</color>
+    <color name="modulegomoku_white">#ffffff</color>
+    <color name="modulegomoku_font_gray">#555555</color>
+    <color name="modulegomoku_base_bg">#eeeeee</color>
+</resources>
