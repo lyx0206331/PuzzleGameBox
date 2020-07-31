@@ -3,9 +3,36 @@ apply from: "config.gradle"
 apply plugin: 'com.alibaba.arouter'
 
 ext {
-    var = 'D:\\Dev\\Android\\appkey.keystore'
-    var1 = 'D:\\Dev\\Android\\debug.keystore'
+    var = getReleaseKeystore()
+    var1 = getDebugKeystore()
 }
+
+def getReleaseKeystore() {
+    def os = org.gradle.internal.os.OperatingSystem.current()
+    if (os.isWindows()) {
+        return 'D:\\Dev\\Android\\appkey.keystore'
+    } else if (os.isLinux()) {
+        return '/home/adrian/Dev/Android/appkey.keystore'
+    } else if (os.isMacOsX()) {
+        return ''
+    } else {
+        return ''
+    }
+}
+
+def getDebugKeystore() {
+    def os = org.gradle.internal.os.OperatingSystem.current()
+    if (os.isWindows()) {
+        return 'D:\\Dev\\Android\\debug.keystore'
+    } else if (os.isLinux()) {
+        return '/home/adrian/Dev/Android/debug.keystore'
+    } else if (os.isMacOsX()) {
+        return ''
+    } else {
+        return ''
+    }
+}
+
 buildscript {
     ext.kotlin_version = '1.3.72'
     repositories {
