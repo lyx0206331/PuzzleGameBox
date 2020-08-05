@@ -3,8 +3,8 @@ apply from: "config.gradle"
 apply plugin: 'com.alibaba.arouter'
 
 ext {
-    var = getReleaseKeystore()
-    var1 = getDebugKeystore()
+    releaseKey = getReleaseKeystore()
+    debugKey = getDebugKeystore()
 }
 
 def getReleaseKeystore() {

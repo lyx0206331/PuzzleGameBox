@@ -18,15 +18,15 @@ android {
 
     signingConfigs {
         debug {
-            storeFile file(var1)
+            storeFile file(debugKey)
             // No debug config
         }
 
         release {
-            storeFile file(var)
-            storePassword "**********"
-            keyAlias "keystore"
-            keyPassword "**********"
+            storeFile file(releaseKey)
+            storePassword KEY_PWD
+            keyAlias ALIAS_NAME
+            keyPassword ALIAS_PWD
         }
     }
 

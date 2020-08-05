@@ -38,6 +38,7 @@ android {
             buildConfigField("boolean", "isModule", "${rootProject.ext.isModule}")
         }
 
+        lintOptions { abortOnError false }
     }
 
 }

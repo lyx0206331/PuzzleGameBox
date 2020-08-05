@@ -78,13 +78,37 @@
 }
 
 #友盟统计
+-keep class com.umeng.** {*;}
+
+-keep class com.uc.** {*;}
+
 -keepclassmembers class * {
-    public <init> (org.json.JSONObject);
+   public <init> (org.json.JSONObject);
 }
--keep public class [com.adrian.modulegomoku].R$*{
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+-keep class com.zui.** {*;}
+-keep class com.miui.** {*;}
+-keep class com.heytap.** {*;}
+-keep class a.** {*;}
+-keep class com.vivo.** {*;}
+-keep public class com.adrian.modulegomoku.R$*{
     public static final int *;
 }
 
 #小米广告
 -keep class com.xiaomi.ad.**{*;}
 -keep class com.miui.zeus.**{*;}
+
+#Arouter
+-keep public class com.alibaba.android.arouter.routes.**{*;}
+-keep public class com.alibaba.android.arouter.facade.**{*;}
+-keep class * implements com.alibaba.android.arouter.facade.template.ISyringe{*;}
+
+# 如果使用了 byType 的方式获取 Service，需添加下面规则，保护接口
+-keep interface * implements com.alibaba.android.arouter.facade.template.IProvider
+
+# 如果使用了 单类注入，即不定义接口实现 IProvider，需添加下面规则，保护实现
+# -keep class * implements com.alibaba.android.arouter.facade.template.IProvider
