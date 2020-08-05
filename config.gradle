@@ -18,7 +18,7 @@ ext {
     def X_TEST_RUNNER_VERSION = "1.2.0"
     def X_TEST_ESPRESSO_CORE_VERSION = "3.2.0"
 
-    def X_CORE_VERSION = "1.0.2"
+    def X_CORE_VERSION = "1.2.0"
     def X_APPCOMPAT_VERSION = "1.1.0"
     def X_CONSTRAINT_LAYOUT_VERSION = "1.1.3"
     def X_RECYCLERVIEW_VERSION = "1.0.0"
@@ -32,25 +32,29 @@ ext {
     def X_COORDINATOR_LAYOUT_VERSION = "1.0.0"
     def X_CURSOR_ADAPTER_VERSION = "1.0.0"
     def X_BROWSER_VERSION = "1.0.0"
-    def X_CUSTOM_VIEW_VERSION = "1.0.0"
+    def X_CUSTOM_VIEW_VERSION = "1.1.0"
     def X_DRAWER_LAYOUT_VERSION = "1.0.0"
     def X_EXIF_INTERFACE_VERSION = "1.0.0"
     def X_GRID_LAYOUT_VERSION = "1.0.0"
     def X_MULTIDEX_VERSION = "2.0.0"
     def X_PERCENT_LAYOUT_VERSION = "1.0.0"
     def X_ANNOTATION_VERSION = "1.0.0"
-    def X_FRAGMENT_VERSION = "1.0.0"
-    def X_MEDIA_VERSION = "1.0.0"
+    def X_FRAGMENT_VERSION = "1.2.1"
+    def X_MEDIA_VERSION = "1.0.2"
     def X_SWIPEREFRESH_LAYOUT_VERSION = "1.0.0"
     def X_VIEW_PAGER_VERSION = "1.0.0"
-    def X_WEBKIT_VERSION = "1.0.0"
+    def X_WEBKIT_VERSION = "1.1.0"
+
+    def ANKO_VERSION = "0.10.8"
 
     def ALIBABA_AROUTER_API_VERSION = "1.5.0"
     def ALIBABA_AROUTER_COMPILER_VERSION = "1.2.2"
     def ALIBABA_FASTJSON_VERSION = "1.2.48"
 
     def UMSDK_ANALYTICS_VERSION = "8.1.4"
-    def UMSDK_COMMON_VERSION = "2.0.0"
+    def UMSDK_ASMS_VERSION = "1.1.3"
+    def UMSDK_CRASH_VERSION = "0.0.4"
+    def UMSDK_COMMON_VERSION = "9.1.0"
 
     def CHANGELOG_VERSION = "1.2.2"
 
@@ -87,12 +91,16 @@ ext {
             androidXViewPager       : 'androidx.viewpager:viewpager:' + X_VIEW_PAGER_VERSION,
             androidXWebkit          : 'androidx.webkit:webkit:' + X_WEBKIT_VERSION,
 
+            ankoAll                 : 'org.jetbrains.anko:anko:' + ANKO_VERSION,
+
             alibabaArouterApi       : 'com.alibaba:arouter-api:' + ALIBABA_AROUTER_API_VERSION,
             alibabaArouterCompiler  : 'com.alibaba:arouter-compiler:' + ALIBABA_AROUTER_COMPILER_VERSION,
             alibabaFastjson         : 'com.alibaba:fastjson:' + ALIBABA_FASTJSON_VERSION,
 
             umsdkAnalytics          : 'com.umeng.umsdk:analytics:' + UMSDK_ANALYTICS_VERSION,
             umsdkCommon             : 'com.umeng.umsdk:common:' + UMSDK_COMMON_VERSION,
+            umsdkCrash              : 'com.umeng.umsdk:crash:' + UMSDK_CRASH_VERSION,
+            umsdkAsms               : 'com.umeng.umsdk:asms:' + UMSDK_ASMS_VERSION,
 
             changelog               : 'de.cketti.library.changelog:ckchangelog:' + CHANGELOG_VERSION
     ]
