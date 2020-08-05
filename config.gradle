@@ -51,7 +51,6 @@ ext {
     def ALIBABA_AROUTER_COMPILER_VERSION = "1.2.2"
     def ALIBABA_FASTJSON_VERSION = "1.2.48"
 
-    def UMSDK_ANALYTICS_VERSION = "8.1.4"
     def UMSDK_ASMS_VERSION = "1.1.3"
     def UMSDK_CRASH_VERSION = "0.0.4"
     def UMSDK_COMMON_VERSION = "9.1.0"
@@ -97,7 +96,6 @@ ext {
             alibabaArouterCompiler  : 'com.alibaba:arouter-compiler:' + ALIBABA_AROUTER_COMPILER_VERSION,
             alibabaFastjson         : 'com.alibaba:fastjson:' + ALIBABA_FASTJSON_VERSION,
 
-            umsdkAnalytics          : 'com.umeng.umsdk:analytics:' + UMSDK_ANALYTICS_VERSION,
             umsdkCommon             : 'com.umeng.umsdk:common:' + UMSDK_COMMON_VERSION,
             umsdkCrash              : 'com.umeng.umsdk:crash:' + UMSDK_CRASH_VERSION,
             umsdkAsms               : 'com.umeng.umsdk:asms:' + UMSDK_ASMS_VERSION,

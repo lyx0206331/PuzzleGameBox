@@ -53,7 +53,6 @@ dependencies {
     androidTestApi rootProject.ext.dependencies.androidXTestRunner
     androidTestApi rootProject.ext.dependencies.androidXTextEspressoCore
 
-    api rootProject.ext.dependencies.umsdkAnalytics
     api rootProject.ext.dependencies.umsdkCommon
     api rootProject.ext.dependencies.changelog
 
