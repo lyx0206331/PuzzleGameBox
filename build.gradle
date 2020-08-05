@@ -27,9 +27,9 @@ def getDebugKeystore() {
     } else if (os.isLinux()) {
         return '/home/adrian/Dev/Android/debug.keystore'
     } else if (os.isMacOsX()) {
-        return ''
+        return 'os path'
     } else {
-        return ''
+        return 'default path'
     }
 }
 

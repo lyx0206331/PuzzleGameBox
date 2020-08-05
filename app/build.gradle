@@ -19,7 +19,6 @@ android {
     signingConfigs {
         debug {
             storeFile file(debugKey)
-            // No debug config
         }
 
         release {
