@@ -44,6 +44,8 @@ ext {
     def X_SWIPEREFRESH_LAYOUT_VERSION = "1.0.0"
     def X_VIEW_PAGER_VERSION = "1.0.0"
     def X_WEBKIT_VERSION = "1.1.0"
+    def X_NAV_FRAGMENT_VERSION = "2.3.0"
+    def X_NAV_UI_VERSION = "2.3.0"
 
     def ANKO_VERSION = "0.10.8"
 
@@ -89,6 +91,8 @@ ext {
             androidXSwiperefreshLayout:'androidx.swiperefreshlayout:swiperefreshlayout:' + X_SWIPEREFRESH_LAYOUT_VERSION,
             androidXViewPager       : 'androidx.viewpager:viewpager:' + X_VIEW_PAGER_VERSION,
             androidXWebkit          : 'androidx.webkit:webkit:' + X_WEBKIT_VERSION,
+            androidXNavigationFragment: 'androidx.navigation:navigation-fragment-ktx:' + X_NAV_FRAGMENT_VERSION,
+            androidXNavigationUI    : 'androidx.navigation:navigation-ui-ktx:' + X_NAV_UI_VERSION,
 
             ankoAll                 : 'org.jetbrains.anko:anko:' + ANKO_VERSION,
 
