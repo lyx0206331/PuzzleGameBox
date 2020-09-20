@@ -35,22 +35,22 @@ import com.adrian.commonlib.application.BaseApplication
  * description:
  **/
 object CommUtil {
-    @JvmOverloads fun <T: Any> logE(cls: Class<T>, msg: String) {
+    fun <T : Any> logE(cls: Class<T>, msg: String) {
         if (BuildConfig.DEBUG) {
             Log.e(cls.simpleName, msg)
         }
     }
 
-    @JvmOverloads fun getScreenWH(): Display {
+    fun getScreenWH(): Display {
         val wm = BaseApplication.instance.getSystemService(Context.WINDOW_SERVICE) as WindowManager
         return wm.defaultDisplay
     }
 
-    @JvmOverloads fun getScreenInfo(context: Context): DisplayMetrics? {
+    fun getScreenInfo(context: Context): DisplayMetrics? {
         return context.resources?.displayMetrics
     }
 
-    @JvmOverloads fun getAppName(context: Context): String? {
+    fun getAppName(context: Context): String? {
         try {
             val packageInfo = context.packageManager.getPackageInfo(context.packageName, 0)
             val labelRes = packageInfo.applicationInfo.labelRes
@@ -61,7 +61,7 @@ object CommUtil {
         return null
     }
 
-    @JvmOverloads fun getVersionName(context: Context): String? {
+    fun getVersionName(context: Context): String? {
         try {
             return context.packageManager.getPackageInfo(context.packageName, 0).versionName
         } catch (e: PackageManager.NameNotFoundException) {
@@ -70,7 +70,7 @@ object CommUtil {
         return null
     }
 
-    @JvmOverloads fun isHasSdcard(): Boolean {
+    fun isHasSdcard(): Boolean {
         return Environment.getExternalStorageState() == Environment.MEDIA_MOUNTED
     }
 
@@ -79,11 +79,14 @@ object CommUtil {
      * @param context
      * @param apkPath 安装文件路径
      */
-    @JvmOverloads fun installApk(context: Context, apkPath: String) {
+    fun installApk(context: Context, apkPath: String) {
         val intent = Intent(Intent.ACTION_VIEW)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         intent.action = Intent.ACTION_VIEW
-        intent.setDataAndType(Uri.parse("file://$apkPath"), "application/vnd.android.package-archive")
+        intent.setDataAndType(
+            Uri.parse("file://$apkPath"),
+            "application/vnd.android.package-archive"
+        )
         context.startActivity(intent)
     }
 
@@ -92,7 +95,7 @@ object CommUtil {
      * @param context
      * @param pkgName 应用包名
      */
-    @JvmOverloads fun uninstallApk(context: Context, pkgName: String) {
+    fun uninstallApk(context: Context, pkgName: String) {
         val intent = Intent(Intent.ACTION_DELETE, Uri.parse("package:$pkgName"))
         return context.startActivity(intent)
     }

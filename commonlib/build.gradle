@@ -8,15 +8,15 @@ android {
     buildToolsVersion rootProject.ext.android.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion rootProject.ext.android.minSdkVerion
-        targetSdkVersion rootProject.ext.android.targetSdkVerion
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
 
         testInstrumentationRunner rootProject.ext.android.testInstrumentationRunner
         consumerProguardFiles 'consumer-rules.pro'
 
-        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+//        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
 
         kapt {
             arguments {
@@ -49,9 +49,9 @@ dependencies {
     api rootProject.ext.dependencies.androidXAppcompat
     api rootProject.ext.dependencies.androidXConstraintLayout
     api rootProject.ext.dependencies.androidXCore
-    testApi rootProject.ext.dependencies.androidXExtJUnit
-    androidTestApi rootProject.ext.dependencies.androidXTestRunner
-    androidTestApi rootProject.ext.dependencies.androidXTextEspressoCore
+    testImplementation rootProject.ext.dependencies.androidXExtJUnit
+    androidTestImplementation rootProject.ext.dependencies.androidXTestRunner
+    androidTestImplementation rootProject.ext.dependencies.androidXTextEspressoCore
 
     api rootProject.ext.dependencies.umsdkCommon
     api rootProject.ext.dependencies.changelog

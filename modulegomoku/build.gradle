@@ -17,7 +17,7 @@ android {
             applicationId "com.adrian.modulegomoku"
         }
         minSdkVersion rootProject.ext.android["minSdkVersion"]
-        targetSdkVersion rootProject.ext.android.targetSdkVerion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
 
@@ -27,7 +27,7 @@ android {
         // dex突破65535的限制
         multiDexEnabled true
 
-        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+//        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
 
         kapt {
             arguments {
